@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "plotly-kz-map"
+version = "0.0.2"
+authors = [{ name = "Aidos Kanapyanov", email = "aidos.kanapyanov2@gmail.com" }]
+description = "A Python package that provides a simple interface to create Kazakhstan maps using Plotly"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["geopandas >= 1.0.0", "plotly >= 5.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/aidoskanapyanov/plotly-kz-map"
+Issues = "https://github.com/aidoskanapyanov/plotly-kz-map/issues"
+Source = "https://github.com/aidoskanapyanov/plotly-kz-map"
