@@ -1,5 +1,7 @@
 # Plotly Kazakhstan Map
 
+[![PyPI version](https://badge.fury.io/py/plotly-kz-map.svg)](https://badge.fury.io/py/plotly-kz-map)
+
 `plotly_kz_map` — is a Python package that provides a simple interface to create
 Kazakhstan maps using [Plotly](https://github.com/plotly/plotly.py).
 
