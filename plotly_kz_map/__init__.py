@@ -123,8 +123,7 @@ def capture(func):
                 "viridis", [n / (n_colors - 1) for n in range(n_colors)]
             )
 
-        fig = px.choropleth(
-            gdf,
+        new_kwargs = dict(
             geojson=gdf,
             color="color",
             hover_data={
@@ -150,6 +149,18 @@ def capture(func):
             if (gdf.color == -10000).any()
             else None,
             color_discrete_sequence=colors,
+        )
+
+        def merge_kwargs(kwargs, new_kwargs):
+            merged_kwargs = kwargs.copy()
+            merged_kwargs.update(new_kwargs)
+            return merged_kwargs
+
+        kwargs.pop("locationmode")
+
+        fig = px.choropleth(
+            gdf,
+            **merge_kwargs(kwargs, new_kwargs),
         )
         fig.update_geos(
             fitbounds="locations",
