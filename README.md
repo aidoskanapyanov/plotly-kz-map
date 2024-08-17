@@ -11,7 +11,8 @@ pip install plotly-kz-map
 
 ## Features
 
-- Drop in replacement for Plotly `choropleth` function, but with Kazakhstan regions support.
+- Drop in replacement for Plotly `choropleth` function, but with Kazakhstan
+  regions support.
 
 ## Example
 
@@ -53,6 +54,36 @@ fig.show()
 ```
 
 ![Plotly Kazakhstan Map discrete](https://github.com/aidoskanapyanov/plotly-kz-map/blob/main/images/plotly-kz-map-discrete.png?raw=true)
+
+## Notes
+
+`locations` keyword argument should be a list of region names abbreviated as
+following (check `px.data.kazakhstan_population().region` to see the full list):
+
+```python
+{
+    "ABY": "Abay Region",
+    "AKM": "Akmola Region",
+    "AKT": "Aktobe Region",
+    "ALR": "Almaty Region",
+    "ATY": "Atyrau Region",
+    "EKR": "East Kazakhstan Region",
+    "JMB": "Jambyl Region",
+    "JTS": "Jetisu Region",
+    "KGD": "Karaganda Region",
+    "KST": "Kostanay Region",
+    "KZY": "Kyzylorda Region",
+    "MNG": "Mangystau Region",
+    "NKR": "North Kazakhstan Region",
+    "PVD": "Pavlodar Region",
+    "TRK": "Turkistan Region",
+    "ULY": "Ulytau Region",
+    "WKR": "West Kazakhstan Region",
+    "ALA": "Almaty",
+    "AST": "Astana",
+    "SHY": "Shymkent",
+}
+```
 
 ## License
 
